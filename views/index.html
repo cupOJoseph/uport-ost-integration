@@ -1,0 +1,127 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>OST & uPort</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">    </script>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    <script src="/web3.js"></script>
+    <script src="/uport-connect.js"></script>
+    <script src="/loggerin.js"></script>
+  </head>
+  <body>
+    
+
+    <div id="ost">
+      <h1>
+        Log in to Simple Tokens
+      </h1>
+      <div class="button">
+       <button id="myBtn" class="btn purple">Connect with uport</button>
+      </div>
+    <div>
+         <ul>
+          <li>Multiple Simple Tokens with 1 identity.</li>
+          <li>Verify who you are within a token's community.</li>
+          <li>Securely own your own identity.</li>
+        </ul> 
+    </div>
+    </div>
+    
+    <!-- The Modal pop up with info-->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p class="loading">You are loved. You are beautiful.</p>
+    
+     <div class="ost-profile" align="left"> 
+      <div class="userIcon">
+        <img src="https://cdn.glitch.com/4fe48ebd-1c0b-4e10-a89e-8c8bb0273891%2Fme-icon.jpg?1533841427643" alt="your profile image" height="80" width="80">
+        <h3>
+          Joseph Schiarizzi
+        </h3>
+        <p>
+          My <span class="tokenName">OST Token - IVNT</span> address: <span class="myAddress">0xe4b420F15d6d878dCD0Df7120Ac0fc1509ee9Cab</span>
+        </p>
+      </div>
+       <hr>
+      <div class="ledger">
+        <div class="tokens">
+          <div class="token">
+            <h3 class="tokenName">
+              OST Token - IVNT
+            </h3>
+            <p class="TokenBalance">
+              Balance: <span class="numBalance">185.08</span>
+            </p>
+            <hr>
+            <h3>
+              Transactions
+            </h3>
+            <table>
+              <tr>
+                <th>
+                  <h4>
+                    Make Transfers
+                  </h4>
+                  <form>
+                     To Address<br>
+                    <input type="text" name="toAddress" placeholder="0xAbc......">
+                    <br>
+                    Amount<br>
+                    <input type="number" name="amount" placeholder="1">
+                    <div class="button">
+                    <input id="sendBtn" class="sbtn purple" type="button" value="Send Tokens">
+                    </div>
+                  </form>
+                </th>
+                <th>
+                  <h4>
+                    Recent 10 transaction with this address
+                  </h4>
+                  <p>
+                    {"success":true,"data":{"result_type":"transactions","meta":{"next_page_payload":{"order_by":"created","order":"desc","page_no":2,"limit":10}},"transactions":[{"id":"26951318-1ce0-4326-abbf-5934e3bee5fe","from_user_id":"6f156d05-5298-48ea-8810-fc6e2bb582c9","to_user_id":"41136c5a-4a9a-4ab7-942b-06557f833403","transaction_hash":"0xf97e578fb3d9e85af8fc2ede2b64ccccf6e25382f3186a129bebbdd17876ec84","action_id":36813,"timestamp":1533894671439,"status":"complete","gas_price":"1000000000","gas_used":"77245","transaction_fee":"0.000077245","block_number":6427655,"amount":"5","commission_amount":"0","airdropped_amount":"0"},{"id":"6af3180e-5a2a-4124-8f07-62bd2d2d7cd0","from_user_id":"6f156d05-5298-48ea-8810-fc6e2bb582c9","to_user_id":"41136c5a-4a9a-4ab7-942b-06557f833403","transaction_hash":"0x144219e377772563048eb204592b3a5452385febb284dd0909d1b38e8a946b26","action_id":36813,"timestamp":1533894658600,"status":"complete","gas_price":"1000000000","gas_used":"77245","transaction_fee":"0.000077245","block_number":6427649,"amount":"5","commission_amount":"0","airdropped_amount":"0"},{"id":"aafc5990-0ccc-4c60-915d-7ca01b10d60c","from_user_id":"6f156d05-5298-48ea-8810-fc6e2bb582c9","to_user_id":"41136c5a-4a9a-4ab7-942b-06557f833403","transaction_hash":"0x3c65faa9d8c27d19f70369a928b34390d3f197a48520afde3ddba1efaae2e3fe","action_id":36813,"timestamp":1533894499890,"status":"complete","gas_price":"1000000000","gas_used":"77245","transaction_fee":"0.000077245","block_number":6427569,"amount":"5","commission_amount":"0","airdropped_amount":"0"},{"id":"2210b998-c1e1-4f74-b2e3-8f66e22eb738","from_user_id":"6f156d05-5298-48ea-8810-fc6e2bb582c9","to_user_id":"41136c5a-4a9a-4ab7-942b-06557f833403","transaction_hash":"0x9d5c9078b1250c402c367de5b23cb165389fb5d510f4f228628ff5040d15560a","action_id":36813,"timestamp":1533894293983,"status":"complete","gas_price":"1000000000","gas_used":"77245","transaction_fee":"0.000077245","block_number":6427467,"amount":"5","commission_amount":"0","airdropped_amount":"0"},{"id":"a883adf3-1145-4bf9-9789-379d196e7235","from_user_id":"6f156d05-5298-48ea-8810-fc6e2bb582c9","to_user_id":"41136c5a-4a9a-4ab7-942b-06557f833403","transaction_hash":"0x8325506fb94e40503fec28a57cdaedd16b49a1af95d9a754dfa821e447d78677","action_id":36813,"timestamp":1533894063978,"status":"complete","gas_price":"1000000000","gas_used":"77245","transaction_fee":"0.000077245","block_number":6427352,"amount":"5","commission_amount":"0","airdropped_amount":"0"},{"id":"05685e38-b783-4ae6-9860-a39e9e48a37a","from_user_id":"6f156d05-5298-48ea-8810-fc6e2bb582c9","to_user_id":"41136c5a-4a9a-4ab7-942b-06557f833403","transaction_hash":"0x7819ccbbb8c2fa711dfb3f161eff5adab93159164a0747ca9afdc04695a7709b","action_id":36813,"timestamp":1533893923398,"status":"complete","gas_price":"1000000000","gas_used":"99026","transaction_fee":"0.000099026","block_number":6427281,"amount":"5","commission_amount":"0","airdropped_amount":"0.08"},{"id":"7f73d3df-caa8-43cd-bd85-ec25494f66ab","from_user_id":"6f156d05-5298-48ea-8810-fc6e2bb582c9","to_user_id":"41136c5a-4a9a-4ab7-942b-06557f833403","transaction_hash":"0x9a26b61684dc923135173515463877406bee0e964d81b90bfa0f357ff48855c2","action_id":36813,"timestamp":1533893838582,"status":"complete","gas_price":"1000000000","gas_used":"99034","transaction_fee":"0.000099034","block_number":6427239,"amount":"5","commission_amount":"0","airdropped_amount":"5"},{"id":"575152f5-d0a9-49cc-8089-8df117c2ec11","from_user_id":"6f156d05-5298-48ea-8810-fc6e2bb582c9","to_user_id":"41136c5a-4a9a-4ab7-942b-06557f833403","transaction_hash":"0xdc8719b9062844220951d17ad13c9dd9e3dcce8464fd72890f2abf2b644d30fa","action_id":36813,"timestamp":1533893480860,"status":"complete","gas_price":"1000000000","gas_used":"99034","transaction_fee":"0.000099034","block_number":6427060,"amount":"5","commission_amount":"0","airdropped_amount":"5"},{"id":"bb7a6ac7-9ed7-4b6e-98fb-6f4a2cda7416","from_user_id":"6f156d05-5298-48ea-8810-fc6e2bb582c9","to_user_id":"41136c5a-4a9a-4ab7-942b-06557f833403","transaction_hash":"0x5df04db6b67d61c55370dfbf1343622d5a9aa3a959a48d3edfe617b4662c6590","action_id":36813,"timestamp":1533893445505,"status":"complete","gas_price":"1000000000","gas_used":"99034","transaction_fee":"0.000099034","block_number":6427042,"amount":"5","commission_amount":"0","airdropped_amount":"5"},{"id":"a701fc55-7c3a-4704-ac22-262350129a9f","from_user_id":"6f156d05-5298-48ea-8810-fc6e2bb582c9","to_user_id":"41136c5a-4a9a-4ab7-942b-06557f833403","transaction_hash":"0x930183bae78f0aa35a7eaad82a11a2d8eb3a3e3437941a72add01ecd25a0969d","action_id":36813,"timestamp":1533893429605,"status":"complete","gas_price":"1000000000","gas_used":"99098","transaction_fee":"0.000099098","block_number":6427034,"amount":"5","commission_amount":"0","airdropped_amount":"5"}]}}
+                  </p>
+                </th>
+              </tr>
+            </table>
+              
+            
+          </div>
+        </div>
+      </div>
+  </div>
+  
+  </div><!-- modal content in here -->
+  
+  
+</div> <!-- end model-->
+    
+
+    <footer>
+      Made with <a href="https://glitch.com">Glitch</a>!
+    </footer>
+    
+    
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/client.js"></script>
+    
+  </body>
+</html>
